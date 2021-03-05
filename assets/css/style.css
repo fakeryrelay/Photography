@@ -1,0 +1,671 @@
+@font-face {
+    font-family: Signa;
+    src: url(../fonts/Authentic\ Signature.ttf);
+}
+@font-face {
+    font-family: Luise;
+    src: url(../fonts/Louis\ George\ Cafe.ttf);
+}
+@font-face {
+    font-family: Nextart;
+    src: url(../fonts/NEXT\ ART_Light.otf);
+}
+@font-face {
+    font-family: Redvel;
+    src: url(../fonts/red-velvet-regular.otf);
+}
+
+body {
+    margin: 0;
+
+    background-color: #fff;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Intro 
+===============*/
+
+.intro {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+    background: url(../img/intro/bg.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__inner {
+    text-align: center;
+    color: #fff;
+}
+
+.intro__suptitle {
+    font-family: Signa;
+    font-size: 95px;
+    font-weight: 400;
+}
+
+.intro__suptitle::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 350px;
+    margin: 0 auto 30px;
+
+    background-color: #fff;
+}
+
+.intro__title {
+    margin-bottom: 30px;
+
+    font-family: Redvel;
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.intro__text {
+    padding: 0 171px;
+
+    font-family: Luise;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* Header 
+======================*/
+.header {
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__nav {
+    padding: 60px 0 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 115px;
+}
+
+.nav__link {
+    text-align: center;
+
+    font-family: Nextart;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+
+    position: relative;
+}
+
+.nav__link::after {
+    content: "";
+    display: inline;
+    background: none repeat scroll 0 0 transparent;
+    height: 1px;
+    width: 0;
+    background-color: #fff;
+    
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.nav__link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* Side links 
+======================*/
+.side__links {
+    height: 200px;
+
+    position: absolute;
+    right: 20px;
+    top: 45%;
+    z-index: 1000;
+}
+
+.side__links-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+.side__link {
+    width: 30px;
+
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.3;
+    text-decoration: none;
+
+    transition: font 0.2s linear;
+}
+
+.side__link:hover{
+    font-size: 25px;
+}
+
+
+/* Section 
+===================*/
+
+
+
+
+/* About 
+========================*/
+.about {
+    position: relative;
+    margin: 35px;
+}
+
+.about__img {
+    position: absolute;
+    top: 25px;
+    left: 80px;
+    z-index: 1;
+}
+
+.about__content {
+    margin-left: 450px;
+    padding:24px 0 24px 30px;
+
+    border-left: 1px solid #000;
+}
+
+.about__title {
+    font-family: Signa;
+    font-size: 95px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+.about__text {
+    margin-bottom: 20px;
+
+    font-family: Luise;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* Button 
+=======================*/
+
+.btn {
+    width: 220px;
+    padding: 12px 24px;
+
+    background: none;
+    border: 1px solid #000;
+
+    font-family: Luise;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all .2s linear;
+}
+
+.btn:hover {
+    background-color: #eeeeee;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn--content {
+    display: block;
+    margin: 50px auto 40px;
+    padding: 10px 35px;
+}
+
+.btn--portfolio:hover {
+    background-color: #c0acab;
+}
+
+
+
+/* Portfolio 
+=========================*/
+.section--portfolio {
+    background: url(../img/portfolio/bg.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.portfolio {
+    padding: 35px 0;
+    text-align: center;
+}
+
+.portfolio__suptitle {
+    font-family: Signa;
+    font-size: 95px;
+    font-weight: 400;
+}
+
+.portfolio__title {
+    display: inline-block;
+    padding: 25px 0;
+
+    font-family: Redvel;
+    color: #fff;
+    font-size: 67px;
+    font-weight: 400;
+
+    border-bottom: 1px solid #fff;
+}
+
+.portfolio__text {
+    padding: 20px 0;
+
+    font-family: Redvel;
+    font-size: 29px;
+    font-weight:700;
+    color: #373737;
+}
+
+
+/* Blog 
+====================*/
+.blog {
+    display: grid;
+    gap: 15px;
+    padding: 70px 0;
+    max-width: 1200px;
+
+    grid-template-areas: 
+    'a  c  f'
+    'a  d  f'
+    'b  d  g'
+    'b  e  g';
+
+    grid-template-rows: repeat(4, minmax(120px, 240px));
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blog__link {
+    text-decoration: none;
+}
+
+.blog__link:nth-child(1) {
+    background: url(../img/blog/1.jpg) no-repeat center;
+    background-size: cover;
+    
+    grid-area: a;
+}
+.blog__link:nth-child(2) {
+    background: url(../img/blog/2.jpg) no-repeat center;
+    background-size: cover;
+
+    grid-area: b;
+}
+.blog__link:nth-child(3) {
+    background: url(../img/blog/3.jpg) no-repeat center;
+    background-size: cover;
+
+    grid-area: c;
+}
+.blog__link:nth-child(4) {
+    background: url(../img/blog/4.jpg) no-repeat center;
+    background-size: cover;
+
+    grid-area: d;
+}
+.blog__link:nth-child(5) {
+    background: url(../img/blog/5.jpg) no-repeat center;
+    background-size: cover;
+
+    grid-area: e;
+}
+.blog__link:nth-child(6) {
+    background: url(../img/blog/6.jpg) no-repeat center;
+    background-size: cover;
+
+    grid-area: f;
+}
+.blog__link:nth-child(7) {
+    background: url(../img/blog/7.jpg) no-repeat center;
+    background-size: cover;
+
+    grid-area: g;
+}
+
+
+/* Video 
+====================*/
+.section--video {
+    background: url(../img/video/bg.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.video__header {
+    text-align: center;
+}
+
+.video__title {
+    display: inline-block;
+    padding: 100px 0 30px;
+
+    font-family: Redvel;
+    font-size: 67px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #fff;
+}
+
+.video__title-text {
+    margin: 0 auto;
+    padding: 40px 0 80px;
+    max-width: 850px;
+
+    font-family: Redvel;
+    font-size: 25px;
+    color: #373737;
+    font-weight: 700;
+}
+
+.video__item {
+    text-align: center;
+    padding: 60px 100px 40px;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+}
+
+.video__text {
+    padding: 0 40px;
+    
+    font-family: Luise;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.video__text::before {
+    content: "";
+    display: block;
+    margin: 20px auto;
+
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+}
+
+.slider__item {
+    padding: 10px;
+    width: 150px;
+    height: 60px;
+
+    text-align: center;
+}
+
+.slider__item:focus {
+    outline: none;
+}
+
+.slider__img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Reviews 
+======================*/
+.reviews {
+    padding: 20px 15px;
+
+    text-align: center;
+
+    border-top: 2px solid #000;
+}
+
+.reviews__suptitle {
+    font-family: Signa;
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.reviews__title {
+    font-family: Nextart;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.reviews__inner {
+    display: flex;
+    margin-top: 180px;
+}
+
+.review__item {
+    position: relative;
+    width: 33.33333%;
+    padding: 80px 40px 40px;
+
+    text-align: center;
+
+    border: 1px solid #000;
+    box-shadow: inset 0 0 3px #373737;
+}
+
+.review__item:nth-child(2) {
+    margin: 0 8%;
+}
+
+.review__img {
+    position: absolute;
+    margin-left: -105px;
+    left: 50%;
+    top: -145px;
+}
+
+.review__author {
+    padding-bottom: 30px;
+
+    font-family: Redvel;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.review__text {
+    font-family: Luise;
+    font-size: 19px;
+}
+
+
+/* Contacts 
+=====================*/
+
+.section__contacts {
+    background: url(../img/contacts/bg.jpg) no-repeat center;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+}
+
+.contacts {
+    padding-top: 40px;
+}
+
+.contacts__header {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.contacts__suptitle {
+    font-family: Signa;
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.contacts__title {
+    font-family: Nextart;
+    font-size: 38px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.contacts__inner {
+    margin: 0 auto;
+    width: 736px;
+
+    border-top: 1px solid #000;
+}
+
+.contacts__in {
+    display: flex;
+    margin: 0 -10px;
+}
+
+.contacts__item {
+    width: 50%;
+    padding: 25px 10px 40px;
+}
+
+.contacts__text {
+    font-family: Luise;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.contacts__img {
+    width: 100%;
+}
+
+.form__header {
+    margin: 16px 0 15px;
+
+    font-family: Luise;
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.form,
+.subject {
+    width: 100%;
+    padding: 8px;
+
+    background: none;
+    border: 1px solid #000;
+    box-shadow: inset 0 0 3px #373737;
+
+    font-family: Luise;
+}
+
+.form {
+    height: 50px;
+
+    font-size: 20px;
+}
+
+.subject {
+    height: 100%;
+    resize: none;
+
+    font-size: 16px;
+}
+
+.form:focus,
+.subject:focus {
+    outline: none;
+}
+
+
+/* Footer 
+======================*/
+
+.footer {
+    background: url(../img/footer/footer_bg.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.footer__inner {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+    color: #fff;
+}
+
+
+.footer__item {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.footer__links-inner {
+    display: flex;
+    width: 250px;
+    height: 30px;
+
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer__text {
+    width: 550px;
+    font-family: Luise;
+    font-size: 19px;
+
+    margin: 0 auto;
+}
+
+.copyright {
+    font-family: Luise;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
